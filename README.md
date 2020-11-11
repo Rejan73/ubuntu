@@ -6,13 +6,12 @@ https://doc.ubuntu-fr.org/wifi_chipset_realtek_rtl8812au
 iwconfig
 
 ```
-cd
-git clone https://github.com/lwfinger/rtl8812au
+git clone -b v5.6.4.2 https://github.com/aircrack-ng/rtl8812au.git
 cd rtl8812au
 make
 sudo make install
-sudo modprobe 8812au
+sudo modprobe 88XXau
 sudo lshw -class network
-
+nmcli dev wifi
 ```
 cf : https://forum.ubuntu-fr.org/viewtopic.php?pid=22307661#p22307661
