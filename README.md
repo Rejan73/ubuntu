@@ -15,3 +15,11 @@ sudo lshw -class network
 nmcli dev wifi
 ```
 cf : https://forum.ubuntu-fr.org/viewtopic.php?pid=22307661#p22307661
+
+
+cd ~/rtl8812au
+source dkms.conf
+sudo mkdir /usr/src/$PACKAGE_NAME-$PACKAGE_VERSION
+sudo cp -r * /usr/src/$PACKAGE_NAME-$PACKAGE_VERSION
+sudo dkms add $PACKAGE_NAME/$PACKAGE_VERSION
+sudo dkms autoinstall $PACKAGE_NAME/$PACKAGE_VERSION
