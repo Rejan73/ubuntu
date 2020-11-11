@@ -10,13 +10,18 @@ cd rtl8812AU_8821AU_linux
 sudo make -f Makefile.dkms install
 
 ```
-cd 
-sudo modprobe -r rtl8812au
-rm -rfv rtl8812AU_8821AU_linux
-git clone https://github.com/gnab/rtl8812au.git
+git clone -b v5.6.4.2 https://github.com/aircrack-ng/rtl8812au.git
 cd rtl8812au
 make
 sudo make install
-sudo modprobe 8812au
+sudo modprobe 88XXau
 sudo lshw -class network
+nmcli dev wifi
 ```
+git clone -b v5.6.4.2 https://github.com/aircrack-ng/rtl8812au.git
+cd rtl8812au
+make
+sudo make install
+sudo modprobe 88XXau
+sudo lshw -class network
+nmcli dev wifi
