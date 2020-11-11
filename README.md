@@ -15,4 +15,4 @@ sudo modprobe 8812au
 sudo lshw -class network
 
 ```
-
+cf : https://forum.ubuntu-fr.org/viewtopic.php?pid=22307661#p22307661
