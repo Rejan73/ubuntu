@@ -26,4 +26,6 @@ sudo dkms autoinstall $PACKAGE_NAME/$PACKAGE_VERSION
 
 #Raspberry
 sudo rclone mount --umask=0 --allow-other --vfs-cache-mode full  hrgoogle: /home/shares/public/hrgoogle &
+sudo /etc/init.d/smbd restart
+
 
