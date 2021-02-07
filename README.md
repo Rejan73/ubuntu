@@ -28,4 +28,13 @@ sudo dkms autoinstall $PACKAGE_NAME/$PACKAGE_VERSION
 sudo rclone mount --umask=0 --allow-other --vfs-cache-mode full  hrgoogle: /home/shares/public/hrgoogle &
 sudo /etc/init.d/smbd restart
 
+vi /etc/samba/smb.conf
+[public]
+  comment = raspberry folder
+  path = /home/shares/public
+  valid users = @users
+  force group = users
+  create mask = 0660
+  directory mask = 0771
+  read only = no
 
