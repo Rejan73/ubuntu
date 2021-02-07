@@ -23,3 +23,7 @@ sudo mkdir /usr/src/$PACKAGE_NAME-$PACKAGE_VERSION
 sudo cp -r * /usr/src/$PACKAGE_NAME-$PACKAGE_VERSION
 sudo dkms add $PACKAGE_NAME/$PACKAGE_VERSION
 sudo dkms autoinstall $PACKAGE_NAME/$PACKAGE_VERSION
+
+#Raspberry
+sudo rclone mount --umask=0 --allow-other --vfs-cache-mode full  hrgoogle: /home/shares/public/hrgoogle &
+
